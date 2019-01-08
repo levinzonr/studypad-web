@@ -4,21 +4,23 @@ import {connect} from "react-redux";
 import Login from './scenes/login/Login'
 import './App.css';
 import Configuration from "./scenes/config/Config";
+import AppBar from "@material-ui/core/es/AppBar/AppBar";
+import IconButton from "@material-ui/core/es/IconButton/IconButton";
 
 class App extends Component {
     render() {
         if (this.props.user.loggedIn) {
             return (
-                <div className="App">
-                    <header className="App-header">
+                <div>
+                    <header>
                         <Configuration/>
                     </header>
                 </div>
             );
         } else {
             return (
-                <div className="App">
-                    <header className="App-header">
+                <div>
+                    <header>
                         <Login/>
                     </header>
                 </div>
