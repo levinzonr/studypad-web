@@ -1,28 +1,36 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import logo from './logo.svg';
+import {connect} from "react-redux";
+import Login from './scenes/login/Login'
 import './App.css';
+import Configuration from "./scenes/config/Config";
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+    render() {
+        if (this.props.user.loggedIn) {
+            return (
+                <div className="App">
+                    <header className="App-header">
+                        <Configuration/>
+                    </header>
+                </div>
+            );
+        } else {
+            return (
+                <div className="App">
+                    <header className="App-header">
+                        <Login/>
+                    </header>
+                </div>
+            );
+        }
+
+    }
 }
 
-export default App;
+const mapStateToProps = (state, ownProps) => ({
+    user: state.user,
+});
+
+
+export default connect(mapStateToProps, null)(App);
