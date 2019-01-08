@@ -20,6 +20,6 @@ export default (state = initState, payload) => {
         case type.LOGOUT:
             return Object.assign({}, initState);
         default:
-            return initState;
+            return state;
     }
 }

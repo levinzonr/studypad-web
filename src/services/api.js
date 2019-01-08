@@ -1,5 +1,7 @@
 import axios from 'axios';
 import * as config from './config';
+import {async} from "q";
+
 
 
 const client = axios.create({
@@ -22,4 +24,9 @@ export async function login(email, password) {
         email: email,
         password: password
     })
+}
+
+export async function getUnivesities() {
+    return client.get("api/universties/find")
+
 }

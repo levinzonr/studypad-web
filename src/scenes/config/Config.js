@@ -13,7 +13,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
-
+import Universities from './universities'
 const drawerWidth = 240;
 
 const styles = theme => ({
@@ -46,7 +46,7 @@ class Config extends React.Component {
    renderMenuItem(index) {
         console.log(index);
         if (index === 1) {
-            return <div>Universitiyes</div>
+            return <Universities/>
         } else if (index === 0) {
             return <div>Topics</div>
         } else {
@@ -90,15 +90,13 @@ class Config extends React.Component {
                     variant="permanent"
                     classes={{
                         paper: classes.drawerPaper,
-                    }}
-                >
+                    }}>
                     <div className={classes.toolbar}/>
                     <List component="nav">
                         <ListItem
                             button
                             selected={this.state.currentItem === 0}
-                            onClick={event => this.handleListItemClick(event, 0)}
-                        >
+                            onClick={event => this.handleListItemClick(event, 0)}>
                             <ListItemIcon>
                                 <InboxIcon/>
                             </ListItemIcon>
@@ -107,16 +105,13 @@ class Config extends React.Component {
                         <ListItem
                             button
                             selected={this.state.currentItem === 1}
-                            onClick={event => this.handleListItemClick(event, 1)}
-                        >
-
+                            onClick={event => this.handleListItemClick(event, 1)}>
                             <ListItemText primary="Topics"/>
                         </ListItem>
                         <ListItem
                             button
                             selected={this.state.currentItem === 2}
-                            onClick={event => this.handleListItemClick(event, 2)}
-                        >
+                            onClick={event => this.handleListItemClick(event, 2)}>
 
                             <ListItemText primary="Tags and Locales"/>
                         </ListItem>

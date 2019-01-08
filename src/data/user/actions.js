@@ -15,6 +15,8 @@ export function login(email, passsword) {
         api.login(email, passsword).then((response) => {
             console.log(response);
             dispatch(receiveLogin(response.data));
+        }).catch((error) => {
+            console.log("error")
         })
     }
 }
