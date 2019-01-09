@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fc6fc692-a34a-4638-97af-94bb40d6a7f0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/scenes/config/topics/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/config/Config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/config/Config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/config/universities/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/config/universities/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/login/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store.js" afterDir="false" />
-    </list>
+    <list default="true" id="fc6fc692-a34a-4638-97af-94bb40d6a7f0" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -301,24 +292,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1546958730459</updated>
-      <workItem from="1546958731591" duration="25588000" />
+      <workItem from="1546958731591" duration="25821000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25588000" />
+    <option name="totallyTimeSpent" value="25821000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="npm" side_tool="true" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24970461" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24970461" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.31757754" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.31757754" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
