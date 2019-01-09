@@ -9,9 +9,10 @@ import ListItemText from "@material-ui/core/es/ListItemText/ListItemText";
 import Typography from "@material-ui/core/es/Typography/Typography";
 import ListItemSecondaryAction from "@material-ui/core/es/ListItemSecondaryAction/ListItemSecondaryAction";
 import IconButton from "@material-ui/core/es/IconButton/IconButton";
-import EditIcon from '@material-ui/icons/Edit'
 import DeleteIcon from '@material-ui/icons/Delete';
 import CreateUniversityComponent from "./components/CreateUniversityComponent";
+import Button from "@material-ui/core/es/Button/Button";
+import Icon from "@material-ui/core/es/Icon/Icon";
 
 class Universities extends React.Component {
     constructor(props) {
@@ -44,9 +45,7 @@ class Universities extends React.Component {
                     <IconButton onClick={() => this.delete(index, item)} aria-label="Delete">
                         <DeleteIcon />
                     </IconButton>
-                    <IconButton onClick={() => this.update(index, item)} aria-label="Edit">
-                        <EditIcon />
-                    </IconButton>
+                        <CreateUniversityComponent toEdit={item} />
                 </ListItemSecondaryAction>
             </ListItem>
         )

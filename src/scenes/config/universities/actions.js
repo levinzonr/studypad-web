@@ -33,6 +33,12 @@ export const setShortName = item => ({
     item: item
 });
 
+
+export const showDialog = item => ({
+    type: types.UNIS_SHOW,
+    item: item
+});
+
 export function loadUniversities() {
     return (dispatch, getState) => {
         showLoading(true);

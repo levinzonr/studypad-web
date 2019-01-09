@@ -6,3 +6,4 @@ export const UNIS_DELETED = 'unis/deleted';
 
 export const UNIS_NEW_FULL = 'full';
 export const UNIS_NEW_SHORT = "short"
+export const UNIS_SHOW = "show dialog"

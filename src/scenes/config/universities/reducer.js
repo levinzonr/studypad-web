@@ -4,8 +4,8 @@ import * as types from './actionTypes'
 const initState = {
     universities: [],
     loading: false,
-    newUniversity: {}
-
+    newUniversity: {},
+    showDialog: false
 
 };
 
@@ -20,6 +20,7 @@ export default (state = initState, payload) => {
         case types.UNIS_LOADED:
             return Object.assign({}, state, {
                 loading: false,
+                showDialog: false,
                 universities: payload.item
             });
         case types.UNIS_DELETED:
@@ -39,6 +40,11 @@ export default (state = initState, payload) => {
                 newUniversity: Object.assign({}, state.newUniversity, {
                     shortName: payload.item
                 })
+            }));
+
+        case types.UNIS_SHOW:
+            return Object.assign({}, state, Object.assign({}, state, {
+                showDialog: payload.item != null ? payload.item : !state.showDialog
             }));
         default:
             return state;
