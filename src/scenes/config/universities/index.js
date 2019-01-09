@@ -26,16 +26,24 @@ class Universities extends React.Component {
         this.props.actions.setActiveBook(index);
     }
 
+    update(index, item) {
+        this.props.actions.updateUniversity(item, {fullName: "new name", shortName: "new short name"})
+    }
+
+    delete(index, item) {
+        this.props.actions.deleteUniverisity(item)
+    }
+
     forAllNotebooks(item, index) {
         console.log(item)
         return (
             <ListItem button>
                 <ListItemText primary={item.fullName}/>
                 <ListItemSecondaryAction>
-                    <IconButton aria-label="Delete">
+                    <IconButton onClick={() => this.delete(index, item)} aria-label="Delete">
                         <DeleteIcon />
                     </IconButton>
-                    <IconButton aria-label="Edit">
+                    <IconButton onClick={() => this.update(index, item)} aria-label="Edit">
                         <EditIcon />
                     </IconButton>
                 </ListItemSecondaryAction>

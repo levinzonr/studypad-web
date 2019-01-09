@@ -18,6 +18,11 @@ const client = axios.create({
 
 });
 
+const wrapToken = (token) => ({
+    headers: {
+        Authorization: `Bearer ${token}`
+    }
+});
 
 export async function login(email, password) {
     return client.post('auth/email', {
@@ -26,7 +31,16 @@ export async function login(email, password) {
     })
 }
 
-export async function getUnivesities() {
-    return client.get("api/universties/find")
+export async function getUnivesities(token) {
+    return client.get("api/university", wrapToken(token))
+
+}
+
+export async function deleteUniversity(token, id) {
+    return client.delete(`api/university/${id}`, wrapToken(token))
+}
+
+export async function updateUniversity(token, id, payload) {
+    return client.patch(`api/university/${id}`, payload, wrapToken(token))
 
 }

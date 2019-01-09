@@ -21,6 +21,11 @@ export default (state = initState, payload) => {
                 loading: false,
                 universities: payload.item
             });
+        case types.UNIS_DELETED:
+           return Object.assign({}, state, {
+               universities: state.universities.filter((item) => item.id !== payload.item)
+
+           });
         default:
             return state;
     }

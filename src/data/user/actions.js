@@ -10,7 +10,7 @@ const receiveLogin = item => ({
 
 export function login(email, passsword) {
     console.log('login');
-    return (dispatch) => {
+    return (dispatch, getState) => {
         console.log("login");
         api.login(email, passsword).then((response) => {
             console.log(response);
