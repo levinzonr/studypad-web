@@ -2,14 +2,15 @@ import {createStore, applyMiddleware, combineReducers, compose} from 'redux'
 import thunk from 'redux-thunk'
 import userReducer from './data/user/reducer';
 import unisReducer from './scenes/config/universities/reducer'
-
+import topicReducer from  './scenes/config/topics/reducer'
 const enhancers = [];
 const middleware = [thunk];
 
 
 const reducer = combineReducers({
     user: userReducer,
-    unis: unisReducer
+    unis: unisReducer,
+    topics: topicReducer
 });
 
 if (process.env.NODE_ENV === 'development') {

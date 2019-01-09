@@ -49,3 +49,15 @@ export async function createUniversity(token, payload) {
     return client.post('api/university', payload, wrapToken(token))
 
 }
+
+export async function getTopics(token) {
+    return client.get('api/shared/topics', wrapToken(token))
+}
+
+export async function createTopic(token, payload) {
+    return client.post('api/config/topics', payload, wrapToken(token))
+}
+
+export async function deleteTopic(token, id) {
+    return client.delete(`api/config/topics/${id}`, wrapToken(token))
+}

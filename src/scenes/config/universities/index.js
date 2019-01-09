@@ -55,7 +55,7 @@ class Universities extends React.Component {
         console.log(this.props)
         return (
                 <section className='w3-cell-row'>
-                    <List style={{height: '100%', width: '25%'}} className=' w3-container  w3-cell w3-mobile'>
+                    <List style={{height: '100%', width: '50%'}} className=' w3-container  w3-cell w3-mobile'>
                         {this.props.unis.map(this.forAllNotebooks, this)}
                         <Divider/>
                         <CreateUniversityComponent/>

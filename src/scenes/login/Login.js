@@ -11,13 +11,14 @@ class Login extends React.Component {
 
     render() {
         return (
-            <div className="w3-container w3-accordion">
+            <div  className="w3-container w3-accordion center">
                 <TextField
                     id="outlined-name"
                     label="Name"
                     margin="normal"
                     variant="outlined"
                 />
+                <br/>
                 <TextField
                     id="outlined-uncontrolled"
                     label="Uncontrolled"
@@ -25,6 +26,7 @@ class Login extends React.Component {
                     margin="normal"
                     variant="outlined"
                 />
+                <br/>
                 <Button
                     onClick={() => {
                         console.log("click ligin");

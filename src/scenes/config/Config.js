@@ -14,6 +14,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import Universities from './universities'
+import Topics from "./topics";
 const drawerWidth = 240;
 
 const styles = theme => ({
@@ -46,9 +47,9 @@ class Config extends React.Component {
    renderMenuItem(index) {
         console.log(index);
         if (index === 1) {
-            return <Universities/>
+            return <Topics/>
         } else if (index === 0) {
-            return <div>Topics</div>
+            return <Universities/>
         } else {
             return <div>Locales</div>
         }
