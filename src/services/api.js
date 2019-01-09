@@ -44,3 +44,8 @@ export async function updateUniversity(token, id, payload) {
     return client.patch(`api/university/${id}`, payload, wrapToken(token))
 
 }
+
+export async function createUniversity(token, payload) {
+    return client.post('api/university', payload, wrapToken(token))
+
+}

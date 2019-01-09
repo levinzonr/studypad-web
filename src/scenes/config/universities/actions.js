@@ -18,10 +18,20 @@ const universityDeleted = item => ({
    item: item
 });
 
-const universityUpdated = item => ({
+export const universityUpdated = item => ({
     type: types.UNIS_EDITED,
     item: item,
-})
+});
+
+export const setNewSchoolName = item => ({
+    type: types.UNIS_NEW_FULL,
+    item: item
+});
+
+export const setShortName = item => ({
+    type: types.UNIS_NEW_SHORT,
+    item: item
+});
 
 export function loadUniversities() {
     return (dispatch, getState) => {
@@ -45,8 +55,21 @@ export function deleteUniverisity(university) {
             console.log(error);
         })
     }
+}
+
+export function createUniversity() {
+
+    return (dispatch, getState) => {
+        api.createUniversity(getState().user.token, getState().unis.newUniversity).then((response) => {
+            dispatch(loadUniversities())
+        }).catch((error) => {
+            console.log(error)
+        })
+    }
 
 }
+
+
 
 export function updateUniversity(university, values) {
     console.log(university)

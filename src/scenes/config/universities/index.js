@@ -11,6 +11,7 @@ import ListItemSecondaryAction from "@material-ui/core/es/ListItemSecondaryActio
 import IconButton from "@material-ui/core/es/IconButton/IconButton";
 import EditIcon from '@material-ui/icons/Edit'
 import DeleteIcon from '@material-ui/icons/Delete';
+import CreateUniversityComponent from "./components/CreateUniversityComponent";
 
 class Universities extends React.Component {
     constructor(props) {
@@ -58,6 +59,7 @@ class Universities extends React.Component {
                     <List style={{height: '100%', width: '25%'}} className=' w3-container  w3-cell w3-mobile'>
                         {this.props.unis.map(this.forAllNotebooks, this)}
                         <Divider/>
+                        <CreateUniversityComponent/>
                     </List>
                 </section>
         )
